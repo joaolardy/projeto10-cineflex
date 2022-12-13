@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import React from "react";
+import { bordaDisponivel, bordaIndisponivel, corDisponivel, corIndisponivel } from "./assets/css/cores";
 
-export default function Cadeira({indice, disponibilidade}){
+export default function Cadeira({indice, disponibilidade, cor, corBorda}){
 
 
     return(
-        <ContainerCadeira cor={(disponibilidade) ? '#C3CFD9': '#FBE192'} corBorda={(disponibilidade) ? '#7B8B99' : '#F7C52B'} >
+        <ContainerCadeira 
+        cor={cor ? cor : ((disponibilidade === true) ? corDisponivel: corIndisponivel)} 
+        corBorda={corBorda ? corBorda : ((disponibilidade === true) ? bordaDisponivel: bordaIndisponivel)} 
+        
+        >
             {(indice || indice === 0) ? indice + 1 : null}
         </ContainerCadeira>
     );

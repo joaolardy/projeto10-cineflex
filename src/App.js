@@ -12,7 +12,7 @@ import MapaSala from "./MapaSala";
 export default function App() {
     const [listaFilmes, setListaFilmes] = useState([]);
     const [filmeEscolhido, setFilmeEscolhido] = useState('');
-    const [sessaoEscolhida, setSessaoEscolhida] = useState('')
+    const [sessaoEscolhida, setSessaoEscolhida] = useState('');
 
     useEffect(() => {
         const obterFilmes = axios.get('https://mock-api.driven.com.br/api/v8/cineflex/movies');

@@ -25,7 +25,7 @@ export default function Assentos({ idSessaoEscolhida }) {
             <h2>Selecione o(s) assento(s)</h2>
             <div>
                 {listaAssentos.map((assento, indice) =>
-                    <Cadeira disponibilidade={assento.isAvailable} indice={indice} />
+                    <Cadeira disponibilidade={assento.isAvailable} indice={indice} idAssento={assento.id} />
                 )}
             </div>
         </ContainerAssentos>
